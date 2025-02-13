@@ -37,3 +37,29 @@
   </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع خاص</title>
+</head>
+<body>
+  <h2>أدخل الكود السري للوصول:</h2>
+  <input type="password" id="accessCode" placeholder="أدخل الكود">
+  <button onclick="checkCode()">دخول</button>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById('accessCode').value;
+      const secretCode = "mySecret123"; // قم بتغيير هذا الكود إلى الكود الذي تفضله
+      if (code === secretCode) {
+        window.location.href = "hidden-page.html"; // الانتقال إلى الصفحة المخفية عند النجاح
+      } else {
+        alert("كود خاطئ!");
+      }
+    }
+  </script>
+</body>
+</html>
